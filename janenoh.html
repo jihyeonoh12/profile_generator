@@ -1,42 +1,4 @@
-const axios = require("axios");
-
-const colors = {
-  green: {
-    wrapperBackground: "#E6E1C3",
-    headerBackground: "#C1C72C",
-    headerColor: "black",
-    photoBorderColor: "#black"
-  },
-  blue: {
-    wrapperBackground: "#5F64D3",
-    headerBackground: "#26175A",
-    headerColor: "white",
-    photoBorderColor: "#73448C"
-  },
-  pink: {
-    wrapperBackground: "#879CDF",
-    headerBackground: "#FF8374",
-    headerColor: "white",
-    photoBorderColor: "#FEE24C"
-  },
-  red: {
-    wrapperBackground: "#DE9967",
-    headerBackground: "#870603",
-    headerColor: "white",
-    photoBorderColor: "white"
-  }
-};
-
-function generateHTML(answers) {
-  console.log(answers.github + "testing");
-  const queryUrl = `https://api.github.com/users/${answers.github}/`;
-
-  axios.get(queryUrl).then(function(res) {
-    console.log(res);
-  });
-  
-
-  return `<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
    <head>
       <meta charset="UTF-8" />
@@ -64,7 +26,7 @@ function generateHTML(answers) {
          height: 100%;
          }
          .wrapper {
-         background-color: ${colors[answers.color].wrapperBackground};
+         background-color: #E6E1C3;
          padding-top: 100px;
          }
          body {
@@ -106,8 +68,8 @@ function generateHTML(answers) {
          display: flex;
          justify-content: center;
          flex-wrap: wrap;
-         background-color: ${colors[answers.color].headerBackground};
-         color: ${colors[answers.color].headerColor};
+         background-color: #C1C72C;
+         color: black;
          padding: 10px;
          width: 95%;
          border-radius: 6px;
@@ -118,7 +80,7 @@ function generateHTML(answers) {
          border-radius: 50%;
          object-fit: cover;
          margin-top: -75px;
-         border: 6px solid ${colors[answers.color].photoBorderColor};
+         border: 6px solid #black;
          box-shadow: rgba(0, 0, 0, 0.3) 4px 1px 20px 4px;
          }
          .photo-header h1, .photo-header h2 {
@@ -161,8 +123,8 @@ function generateHTML(answers) {
          .card {
            padding: 20px;
            border-radius: 6px;
-           background-color: ${colors[answers.color].headerBackground};
-           color: ${colors[answers.color].headerColor};
+           background-color: #C1C72C;
+           color: black;
            margin: 20px;
          }
          
@@ -189,37 +151,37 @@ function generateHTML(answers) {
       <div>
       <div class="container">
           <div class="photo-header">
-            <img src="/image/profileimg.jpg" alt="user profile">
-            <h1>Hi! </br> My name is ${answers.name}</h1>
+            <img src="#" alt="user profile">
+            <h1>Hi! </br> My name is jane noh</h1>
             <h3>currently @ </h3>
             <div class="links-nav">
-                <h4 class="nav-link location"> location : ${answers.location}</h4>
-                <h4 class="nav-link location"> github: ${answers.github}</h4>
-                <h4 class="nav-link location"> blog : ${answers.blog}</h4>
+                <h4 class="nav-link location"> location : korea</h4>
+                <h4 class="nav-link location"> github: jihyeonoh12</h4>
+                <h4 class="nav-link location"> blog : blogname</h4>
           </div>
           </div>
           
           <main>
-            <h1 class="col container">${answers.github}</h1>
+            <h1 class="col container">jihyeonoh12</h1>
             <div class="container">
                 <div class="row">
                     <div class="col card">
                         <h2>Public Reposipories</h2>
-                        <h3>${answers.repo}</h3>
+                        <h3>45</h3>
                     </div>
                     <div class="col card">
                       <h2>Followers</h2>
-                      <h3>${answers.follower}</h3>
+                      <h3>23</h3>
                   </div>
                 </div>
                 <div class="row">
                     <div class="col card">
                         <h2>GitHub Stars</h2>
-                        <h3>${answers.star}</h3>
+                        <h3>44</h3>
                     </div>
                     <div class="col card">
                       <h2>Following</h2>
-                      <h3>${answers.following}</h3>
+                      <h3>24</h3>
                   </div>
                 </div>
             </div>
@@ -230,11 +192,4 @@ function generateHTML(answers) {
     </div>
     </body>
     </html>
-      `
-
-}
-
-
-
-
-module.exports = generateHTML;
+      

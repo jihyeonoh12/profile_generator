@@ -26,6 +26,31 @@ function promptUser() {
       message: "Where are you from?"
     },
     {
+      type: "input",
+      name: "blog",
+      message: "Type in your blog name"
+    },
+    {
+      type: "input",
+      name: "repo",
+      message: "How many projects do you have on Github?"
+    },
+    {
+      type: "input",
+      name: "follower",
+      message: "How many followers do you have on Github?"
+    },
+    {
+      type: "input",
+      name: "following",
+      message: "How many followings do you have on Github?"
+    },
+    {
+      type: "input",
+      name: "star",
+      message: "How many stars do you have on Github?"
+    },
+    {
         type: "list",
         name: "color",
         message: "Select one color",
